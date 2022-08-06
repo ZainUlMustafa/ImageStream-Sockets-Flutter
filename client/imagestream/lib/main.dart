@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './ImageListAdapter.dart';
-import './PaginationController.dart';
+import 'imageList/ImageListAdapter.dart';
+import 'Pagination/PaginationController.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,13 +26,18 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: PaginationController(imageListAdaptHelp, gen100Numbers()),
+      home: Scaffold(
+        appBar: AppBar(),
+        body: PaginationController(imageListAdaptHelp, gen100Numbers()),
+      ),
     );
   }
 
   List<String> gen100Numbers() {
     List<String> t = [];
-    for (int i=0; i<100; ++i){t.add("$i");}
+    for (int i = 0; i < 100; ++i) {
+      t.add("$i");
+    }
     return t;
   }
 }

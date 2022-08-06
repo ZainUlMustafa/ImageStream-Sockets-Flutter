@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:imagestream/ImageCard.dart';
+import 'package:imagestream/imageList/ImageCard.dart';
 
 class ImageListAdapter extends StatelessWidget {
   final List<String> listOfImages;
